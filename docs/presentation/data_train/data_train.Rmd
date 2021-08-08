@@ -1,0 +1,761 @@
+---
+title: "数据思维从哪来？"
+author: "大数据-任万凤"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: [default, zh-CN.css]
+    lib_dir: libs
+    chakra: remark.min.js
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      self_contained: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+options(servr.daemon = TRUE)
+```
+
+
+### 自我介绍
+
+.pull-left[
+
+- 北京大学数学学院毕业
+
+- 国内第一批增长黑客
+
+- 魔镜系统负责人
+
+- 51Talk大数据团队算法负责人&算法专家
+
+- 8年跨行业增长经验，给小影、丰田、新东方在线、
+暴漫、新华保险、云南白药、在行等做过全流程的
+咨询和增长服务
+
+- 有数据全链条中有丰富的项目经验
+
+]
+
+.pull-right-new[
+
+<img src="img/photo.png" height="400px">
+
+]
+
+
+???
+
+大家好，我是来自大数据的任万凤，非常荣幸能在这里跟大家分享数据思维的话题，之前可能跟大家在公司接触的时间比较少，毕竟是坐在角落的安静的�程序媛，我之前毕业于北大，本科研究生都是做数学统计专业，毕业后一直投身于各个行业，使得数据能发挥较大的价值。15年 开始做咨询、精准营销等工作，帮助了丰田、新东方在线、优米网、新华保险、云南白药进行市场战略定位、精准营销等工作，后期因为无线手机端的发展，越来越多的企业都开始关注无线端的数据，因此那时候内部创业转到了诸葛io，国内第一家做增长黑客的公司，帮助各个公司进行增长服务，包含数据平台的埋点和自动化分析，因此我也算是国内第一批吃到增长黑客螃蟹的人，在这些工作经历中，我也经历过数据的产生到数据分析到数据价值发现，到数据产品、运营等都有所涉及，今天也是跟大家一起来交流相关的经验，有问题之处还请大家指出
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### 数据思维从哪来？
+
+<br>
+
+- 您的**北极星**指标是？
+
+- 数据是怎么**采集**的？
+
+- 数据**计算**就是加减乘除？
+
+- 数据可视化的重要性
+
+- 数据**评估**灵魂五问
+
+???
+
+---
+class: inverse, middle, center
+
+# 您的**北极星**指标是？
+
+--
+
+### 转化率？
+
+--
+
+### 续费率？
+
+--
+
+### 转介绍率？
+
+--
+
+### 提出退费率？
+
+--
+
+### 人效？
+
+???
+background-size: 120px
+
+我想知道我们目前哪些人负责转化率？
+哪些人负责转介绍率
+哪些人负责续费率
+提出退费率?
+
+打蛇打七寸，可能就打在蛇尾巴上了
+
+---
+class: center,middle
+
+background-image: url(img/drucker.png)
+background-size: 80px
+background-position: 85% 65%
+
+
+<blockquote>If you can't measure it <strong>accurately</strong>, you can't improve it.</blockquote>
+
+
+???
+
+---
+
+## 你看到的数据是真实的吗？
+
+<br>
+
+.center[![](img/soldier.jpg)]
+
+--
+
+<blockquote>马克吐温：世界上存在着三种谎言，谎言，该死的谎言，<strong>统计数字</strong></blockquote>
+
+
+???
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+## 数据是怎么采集的？
+
+---
+### 巧妇难为无米之炊，数从**何**来
+
+<br>
+
+--
+
+1. 行为数据：内部埋点采集(前端可点、后端规则触发)
+
+--
+
+2. 定性数据：设计问卷进行线上或线下调研
+
+--
+
+3. 宏观数据：第三方咨询或数据采集机构如Questmobile/艾瑞等，统计局
+
+--
+
+4. 灰色数据：爬虫(在法律边缘试探)
+
+
+???
+
+没有任何公司数据可以首先查看公司的内部数据流，如果没有的情况可以通过调研或者其他第三方自己产生相应的数据，或者再不济也可以游走在法律的边缘爬取别人的数据
+
+---
+### 数据采集的灵魂三问
+
+
+- 数据采集方式是否科学？数据可信度？
+
+- 数据采集的样本量如何，分子分母是啥？
+
+- 数据是显性还是隐性数据
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+## 如何判断学员的经济实力？
+
+--
+
+### .orange[朋友圈看内容/视频监课看装修？]
+
+???
+
+大家集思广益一下
+
+---
+
+### 大(AI)数(suan)据(ming)视角 -- 找到富人生活方式
+
+.center[![img](img/reg007.jpg)]
+
+--
+
+是否经常海淘、是否国外旅游、是否有线下教育机构.....
+
+---
+### 大(AI)数(suan)据(ming)视角 -- 找到富人区
+
+.center[![img](img/fangjia.jpeg)]
+
+--
+
+更多：手机号的价值、转介绍人的经济实力、调研信息(国际班等)
+
+---
+class: inverse, middle, center
+
+## 如何判断我们的低幼学员的兴趣？
+
+---
+### 用户压根不知道自己喜欢什么
+
+--
+
+### 直到你把产品放到他的面前
+
+.center[![img](img/iqiyi_home.png)]
+
+???
+
+福特汽车公司创始人亨利·福特说：如果在汽车时代早期询问客户有何需求，很多人可能都会回答说“要一匹跑得更快的马”。用户压根不知道自己需要什么，直到你把它摆在他面前，乔布斯如是说。
+
+比如我们想知道什么样的教学内容是用户喜欢的，更容易被用户学习的，那么我之前就创建了一个爱奇艺自媒体号，运营国内外的英语启蒙的资源，我需要看到在这个爱奇艺的用户量及体系下，什么才是用户最喜欢的
+
+---
+### 生活场景沉浸式体验有助学习体系构建
+
+<br>
+
+.center[![img](img/popular.png)]
+
+???
+
+我们找到了的答案：也就是游乐场、玩具、洗澡、安全等这样的一些生活场景 可以帮助孩子更好的学习，同时也会发现一些新起之秀，比如我们的垃圾分类、科学启蒙等
+
+
+---
+class: inverse, middle, center
+
+## 数据计算就是加减乘除？ 
+
+--
+
+<big>NO!</big>
+
+---
+## 是不是所有的同性恋者都有艾滋病?
+
+![](img/aiz1.png)
+
+---
+### 是不是所有的同性恋者都有艾滋病?
+
+<br>
+
+中国同性恋者约有5000万人，异性恋者13.5亿人。
+
+5000万人除以总人口14亿，那么就得出同性恋人数占总人口的3.5%。
+
+**3.5%**的人口总数，却得了**20.8%**艾滋病总数，牛逼啊。
+
+同性性行为导致艾滋病 43.4万*20.8%=9万左右
+
+异性性行为导致艾滋病43.4万*69.1%=30万左右。
+
+9万除以0.5亿总数=0.18%的概率得艾滋病
+
+30万除以13.5亿总数=0.02%的概率得艾滋病
+
+<br>
+
+**也就是说同性性行为得艾滋病的概率是异性性行为的9倍**
+
+
+---
+### 你认为哪个老师更受欢迎？
+
+<br>
+
+假定有两个外教，外教A是6个好评，4个差评，项目B是55个好评，45个差评。你认为哪个项目更受欢迎？
+
+--
+
+B的好评率只有55%（55 / 100），而A为60%（6 / 10），所以是外教A比B好？
+
+--
+
+论上讲，好评率越大应该越好，但是**样本量**的不同，导致好评率的**可信性**有差异。
+
+想想你逛淘宝的时候如何选择商品？
+
+<br>
+
+--
+
+.big-font-size[通过**威尔逊区间法**处理可以让**小**数据更可信！]
+
+---
+
+### 铀矿是否会影响工人的寿命？
+
+<br>
+
+统计学家曾经调查铀矿工人的寿命，结果让人大跌眼镜，在铀矿工作的工人居然与普通人的寿命相当，有时甚至更长；
+
+难道去铀矿工作对身体无害甚至有益嘛？
+
+--
+
+事实上，通常是哪些身体强壮的人才会去铀矿工作，他们的寿命本身就更长一些，正是因为去了铀矿工作，才把寿命拉到了正常水平，造成了数据的伪独立性。
+
+<br>
+
+--
+
+.big-font-size[**若数据结果不符合常识，请思考样本的背景信息**]
+
+
+---
+
+### 辛普森悖论<sup>*</sup>
+
+<br>
+
+<blockquote>在某个条件下的两组数据，分别讨论时都会满足某种性质，可是一旦合并考虑，却可能导致相反的结论。</blockquote>
+
+<br>
+
+--
+
+某国外一所高校的录取情况
+
+| 分类 | 男生 | 女生 |
+| :----: | :----: | :----: |
+|  申请人数   |  304 | 253 |
+|  录取人数   |  209 | 143 |
+|  录取率   |  **68.8%** | 56.5% |
+
+--
+
+.center[ **学校的女生被歧视了吗？**]
+
+.footnote[英国统计学家E.H.辛普森于1951年提出的悖论]
+
+---
+### 辛普森悖论
+
+别急！把上面的数据按照院系拆分，再来看看每个院的录取率（假设只有这两个院系）
+
+
+| 学院 | 法学院 | 法学院 |商学院 | 商学院 |
+| :----: | :----: | :----: |:----: | :----: |
+| 性别 | 男生 | 女生 |男生 | 女生 |
+|  申请人数   |  53 | 152 | 251 | 101 |
+|  录取人数   |  8 | 51 | 201 | 92 |
+|  录取率   |  15.1% | **33.5%** | 80.1% | **91.1%** |
+
+--
+
+当我们分别对各院系进行分析时，女生的录取率明显高于男生，很显然这跟上面的结论完全相悖呀！Why？
+
+---
+class: inverse, middle, center
+
+### 不同院系男女比例失调
+
+--
+
+### 性别不是影响录取率的因素，反而不同院系才是
+
+---
+
+### 如何避免辛普森悖论
+
+
+--
+
+<blockquote>很难，除非你能掌控全局！我们不可能光用统计数字来推导准确的因果关系  --By 统计学家</blockquote>
+
+<br>
+--
+
+那从数据计算的维度，我们可以怎么做？
+
+
+1. 准确的**用户分组**，要利用特征对用户进行**合理划分**（设备、年级、英语水平等）
+
+2. 斟酌个别分组的权重，以一定的**系数去消除以分组资料基数差异**所造成的影响
+
+3. 必需了解该情境是否存在其他潜在**要因**而综合考虑
+
+--
+
+辛普森悖论非常重要，因为它时刻在提醒我们，表格中显示的数据可能并不是所有数据。我们不能只满足于数字、数据，而必须关注数据的生成过程——因果模型——对数据负责
+
+???
+
+
+
+因为很多人容易忽略辛普森悖论，以至于有人可以专门利用这个方法来投机取巧。举个例子，比赛100场球赛以总胜率评价好坏。取巧的人专找高手挑战20场而胜1场，另外80场找平手挑战而胜40场，结果胜率41%；认真的人则专挑高手挑战80场而胜8场，而剩下20场平手打个全胜，结果胜率为28%，比41%小很多。但仔细观察挑战对象，后者明显更有实力。
+
+
+---
+class: inverse, middle, center
+
+### 在数据计算中我们需要综合考虑**样本量**、样本**背景**、核心特征、其他**要因**、分组平衡等
+
+???
+
+一个小案例
+
+---
+class: inverse, middle, center
+
+### 人效是怎么定义的？我们如何提升人效
+
+---
+### 对于人效的思考
+
+<br>
+
+<blockquote>人效 =  营业额/销售人员总数</blockquote>
+
+<br>
+
+--
+
+怎么去定义各团队的人效？班主任的人效？
+
+
+1. 班主任每日的工作内容分布是？ （做业绩、抓服务(选老师、学情服务、家长理念)）
+
+2. 这些工作内容的占比是？哪些是已经优化到极致的？ 
+
+3. 如果我是一个班主任，我每天的工作怎么做才是ROI最高的？
+
+<br>
+
+--
+
+把学员分类成8类，然后针对这8类针对性给到服务方法论和物料；开启1VN的服务模式
+
+???
+
+目前公司的人效从每人带来的产出，那每个CC为此付出的成本呢？我们能为人效的过程做什么？
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+### 数据可视化的重要性
+
+???
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### Anscombe's quartet <sup>*</sup>
+
+
+* x的均值9
+
+* x的方差是11
+
+* y的均值7.5
+
+* y的方差4.122
+
+* cor(x,y)是0.816
+
+* 线性回归 y=3+0.5x
+
+.footnote[[*] 安斯库姆对皮尔逊相关系数的嘲讽]
+
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### Anscombe's quartet plot
+
+.center[![img](img/quartet.png)]
+
+
+---
+class: inverse, middle, center
+
+## 项目中的数据评估
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### 数据评估的灵魂五问
+
+<br>
+   
+   - 你**找**准当前工作的评估指标了吗？
+   
+   - 这个指标**最大的影响因素**是什么？
+   
+   - 你的**原假设**是什么？
+   
+   - 怎么**证明**这个优化跟之前有显著差异？
+   
+   - 你有多大的概率去证明这个指标是**真的提升**了？
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### 你找准评估指标了吗？
+
+<br>
+
+- 转化率?
+
+- 续费率?
+
+- 转介绍率(直接)
+
+- 提出退费率？
+
+- 人效（怎么定义）
+
+- 可确认收入（直接）
+
+<br>
+
+--
+
+是参与率、完成率、重复使用率还是四大率？
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### 您的指标最大影响因素是什么？
+
+--
+
+<img src="img/factor.png" height="400px" width="1000px">
+
+--
+
+在对转化率的贡献中，用户本身质量的影响占比.orange[60%]，销售端CC影响占比.orange[30%]，教师/教材等影响占比.orange[10%]
+
+???
+
+.center[![](img/factor.png)]
+
+---
+class: inverse, middle, center
+
+### 付费课新教材对提出退费的影响？
+
+### 级别测试对续费率的影响？
+
+### 收藏老师对课耗的影响？
+
+---
+class: inverse, middle, center
+
+### 您的原假设是什么
+
+--
+
+#### 你的语言：**改动后后指标会提升**
+
+--
+
+#### 统计语言：H0: u1-u2 = 0  **改动后指标跟之前无明显差异** 
+
+---
+## Who knows P-value？
+
+<br>
+
+.center[![](img/explain.png)]
+
+???
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 97% 5%
+
+
+.center[![](img/pvalue1.png)]
+
+
+<br>
+
+--
+
+.big-font-size[P-value可以证明这个优化跟之前有显著差异？]
+
+???
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### P-value的理解：小概率事件的概率
+
+<br>
+
+.center[![](img/pvalue_distribute.jpg)]
+
+<br>
+
+P-value: 在实际观测数据中找到发生小样本事件的概率就可以拒绝原假设！证明改动是有显著差异的!
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### How to calculate P-value？
+
+<br>
+
+.center[![](img/pvalue.jpg)]
+
+
+* $\hat p$ is Sample Proportion
+* p0 is Assumed Population Proportion in the Null Hypothesis
+* n is the Sample Size
+
+???
+
+<img src="img/pvalue.jpg" height="450px" width="800px">
+
+---
+class: center
+
+### 你有多大的概率去证明这个指标是真的提升了？
+
+**统计功效:  $1- \beta$ **
+
+<br>
+
+.center[![](img/power.png)]
+
+---
+
+### Bi-board现有工具助力项目评估
+
+<br>
+
+<img src="img/abtest.png" height="450px" width="800px">
+
+---
+class: inverse, middle, center
+
+### 我们都在评估自己，谁在评估学员？
+
+---
+### 学员学习评估我们做了啥（智能薄弱分析）
+
+<img src="img/boruo.png" height="450px" width="800px">
+
+--
+
+如何更专业、准确的评估学员的学习？-->课前、课中、课后、测评等学习行为采集
+
+---
+
+### 魔镜3.0 .orange[智能薄弱]评估上线，提升.orange[23%]的点击
+
+<br>
+
+<img src="img/boruo1.png" height="450px" width="800px">
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+### 学习英语的一个又一个的里程碑是什么？
+
+???
+
+我们是否有去记录每个学员的每个milestone,如何判断
+
+---
+class: inverse, middle, center
+
+## 怎么提升数据思维能力？
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+### 怎么提升数据思维能力
+
+<br>
+
+- 《白话统计》
+
+- 《女士品茶》
+
+- 《数据思维实战》
+
+---
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+## summary
+
+- 数据采集：
+
+  - 巧妇难为无米之炊，大数据首先的有数据，项目上线前一定需要埋点；
+  
+  - 没有内部数据的时候，可以用第三方咨询/调研问卷/技术爬虫/自媒体等方式来提升认知
+
+- 数据计算: 
+
+   - 不是比率越大数据就越可信，相信统计数字之前，弄清楚计算逻辑；
+   
+   - 在数据计算中我们需要综合考虑样本量、样本先验、核心特征和分组信息等
+
+- 数据评估
+
+   - 找到能准确度量自己的工作的数据指标
+   
+   - 提前分析评估指标影响最大的因素
+   
+   - 根据项目目标提出假设
+   
+   - 证明这个指标是真的提升：P-Value + 统计功效
+
+---
+class: center, middle
+background-image: url(img/51talk.png)
+background-size: 200px
+background-position: 90% 5%
+
+# Any Question ?
+
+## renwanfeng@51talk.com

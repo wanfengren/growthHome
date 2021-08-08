@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WanFeng‘s HOME</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+  <!-- Theme: Simple -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+  <!-- Theme: Dark -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" /> -->
+  <!-- Theme: vue -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+
+
+</head>
+
+<!-- dosify的字体样式 -->
+<style>
+:root {
+    --base-background-color: #fff;
+    --base-color           : var(--mono-shade2);
+    --base-font-family     : "阿里巴巴普惠体", "Noto Sans CS Light", Arial, sans-serif;
+    --code-font-family     : "Source Code Pro 常规体", Inconsolata, Consolas, Menlo;
+    --base-font-size       : 16px;
+    --base-font-weight     : normal;
+    --strong-color         : DarkOliveGreen;
+    --blockquote-border-color  : ;
+    --blockquote-border-style  : ;
+    --code-inline-background            : var(--mono-tint2);
+    --code-inline-border-radius         : var(--border-radius-s);
+    --code-inline-color                 : brown;
+    }
+.markdown-section {
+        max-width: 95% !important;
+    }
+</style>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Home',
+      repo: '',
+      loadSidebar: true,
+      readyTransition : true, // default
+      responsiveTables: true, // default
+      plantuml: {
+        skin: 'classic',
+      },  
+      count:{
+        countable:true,
+        fontsize:'0.6em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      },
+      search: {
+        maxAge: 0, // 过期时间，单位毫秒，默认一天86400000
+        // paths: 'auto',
+        paths: ["education_view.md","KidsCultivate/learnplan_eachperoid.md","manage/interview.md","learnenglish/acquisition.md","learnenglish/teach.md","learnenglish/assessment.md","learnenglish/assessment4learning.md","learnenglish/five_little_monkeys.md","Kidsultivate/kid-cultivate.md","Kidsultivate/learning_comprehensive.md","Kidsultivate/learnning_girt.md","Kidsultivate/learning_habit.md","Kidsultivate/learning_motivation.md","Kidsultivate/kid_growth_feature.md","learn_comprehensive/listening_comprehension.md","learn_comprehensive/reading_comprehension_begin.md","learn_comprehensive/reading_comprehension_advance.md","learn_comprehensive/Comprehension_MatthewEffect.md","learn_will/independence.md","learn_will/Perseverance.md","learn_will/emotion_regulation_primary.md","learn_will/emotion_regulation_advance.md","learn_habit/attention_focusing.md","learn_habit/reading_habit.md","learn_habit/writing_habit.md","learn_habit/rethink_habit.md","learn_motivation/curiosity.md","learn_motivation/self-efficacy.md","learn_motivation/correct_attribution.md","learn_motivation/goal_management.md"
+        ], //'auto'
+        // paths: ["51Talk.md","51Talk/2020plan.md","51Talk/2021plan.md","51Talk/ceo-meeting/ceo-meeting-2020.md","51Talk/ceo-meeting/ceo-meeting-2021.md","51Talk/Job-description.md","51Talk/project-thinking/51live.md","51Talk/project-thinking/mentor.md","51Talk/project-thinking/ranking-lower.md","51Talk/project-thinking/return-on-investment.md","51Talk/project-thinking/sales.md","51Talk/project-thinking/student.md","51Talk/project-thinking/teacher-improvement.md","51Talk/survey.md","51Talk/year-end/2020Q4.md","about/install.md","about/promotion.md","about/self.md","about/shuhao.md","about/startup.md","about/title.md","business.md","children.md","children/kids-study-confidence.md","children/kids-study-driver.md","children/kids-study-emotion.md","children/kids-study-method.md","children/kids-study-problem.md","children/models_and_examples_to_us.md","children/reading.md","datascience.md","datascience/#.md","datascience/ab_testing.md","datascience/analytics-crm.md","datascience/analytics.md","datascience/app.md","datascience/badcase.md","datascience/bayes.md","datascience/casestudy.md","datascience/clickstreaming/web.md","datascience/data_warehouse.md","datascience/data-fallacies-to-avoid.md","datascience/data-safety.md","datascience/graph-model.md","datascience/industry.md","datascience/internship.md","datascience/interview.md","datascience/job-description.md","datascience/knowledge/plan.md","datascience/leananalytics.md","datascience/loss.md","datascience/make-business-analytics-better.md","datascience/operational-research.md","datascience/platform.md","datascience/questions.md","datascience/ranking.md","datascience/real-time-data.md","datascience/recsys.md","datascience/regression.md","datascience/reinforce.md","datascience/scheduling-system/intro.md","datascience/slot-forecast.md","datascience/sna.md","datascience/statistics.md","datascience/super-position-model.md","datascience/tips.md","datascience/uplift.md","ecnomics.md","education.md","education/contents_arch.md","education/curriculum/1.md","education/curriculum/2.md","education/curriculum/3.md","education/curriculum/4.md","education/curriculum/5.md","education/curriculum/6.md","education/curriculum/7.md","education/curriculum/8.md","education/curriculum/9.md","education/educational-theory.md","education/english-assessment.md","education/evaluation.md","education/family.md","education/financing.md","education/how-study-english.md","education/knowledge.md","education/website.md","history.md","Home.md","hr-sale.md","hr-sale/ability.md","hr-sale/amazon.md","hr-sale/competency.md","hr-sale/competency/Achievement.md","hr-sale/competency/Cognitive.md","hr-sale/competency/Effectiveness.md","hr-sale/competency/Impact.md","hr-sale/competency/Management.md","hr-sale/competency/Service.md","hr-sale/how-to-sell.md","hr-sale/hr-ai.md","hr-sale/ke.md","hr-sale/sale.md","hr-sale/teacher-competency.md","investment.md","language.md","language/hexo.md","language/r.md","language/r/onehot.md","language/r/waterfall.md","language/uml.md","language/uml/activity_diagram.md","language/uml/class_diagram.md","language/uml/component_diagram.md","language/uml/example.md","language/uml/mindmap.md","management.md","management/51Talk-thinking.md","management/how-to-communication.md","management/how-to-interview.md","management/how-to-report.md","management/how-to-review.md","management/project_management.md","management/team.md","management/values-case.md","marketing.md","meta-knowledge.md","mindmap/guanghua.md","motto.md","operations.md","operations/meituan.md","product.md","product/42rules.md","product/abc.md","product/first.md","product/goods.md","product/growth.md","product/huohua.md","product/kano-model.md","product/lianjia.md","product/linkedin.md","product/methodology.md","product/netease.md","product/soul.md","product/touch-point.md","product/user-stories.md","reading.md","reading/2019_books.md","reading/excerpt.md","README.md","sociology.md","strategy.md","strategy/blm-action.md","strategy/blm-strategy-mindmap.md","strategy/blm-strategy.md","strategy/business-model-canvas.md","study.md","study/how-to-study.md"], 
+        placeholder: '在这里搜索...',
+        noData: '未找到结果，换个搜索词试试？',
+        namespace: 'web',
+      }
+    }
+
+  </script>
+
+  <!-- Docsify 的各个插件 -->
+  <!-- 萌妹摸头 -->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <!-- 图片缩放插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 支持R代码块高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-r.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-r.min.js"></script>
+  <!-- 支持python代码块高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <!-- 支持python代码块高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-django.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-django.min.js"></script>
+  <!-- 支持SQL代码块高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+  <!-- 支持YAML代码块高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <!-- latex插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-r.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 数当前页面的阅读字数和时长插件 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+  <script src="https://unpkg.com/docsify-themeable/dist/js/docsify-themeable.min.js"></script>
+  <!-- 在所有的代码块中，插入复制代码插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- 分页插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
+
+
+

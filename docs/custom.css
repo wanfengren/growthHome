@@ -1,0 +1,59 @@
+
+
+li > ul {
+  margin: 0 !important;
+}
+
+.center90 {
+	margin: 0 auto !important;
+	width: 90%;
+	display: table !important;
+}
+
+.center80 {
+	margin: 0 auto !important;
+	width: 80%;
+	display: table !important;
+}
+
+.markdown-body ul, .markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.markdown-body pre, code 
+    {
+    /* background-color: #fdf7ee; */
+    /* BEGIN word wrap */
+    /* Need all the following to word wrap instead of scroll box */
+    /* This will override the overflow:auto if present */
+    background-color:#F8F8F8;
+		border-radius: 3px;
+		font-family: Courier New, Consolas, Monaco, Andale Mono, monospace;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    /* END word wrap */
+    }
+
+/* BEGIN css for /standard/hadoop/cdh-cluster-service-layout.md */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-b2y8{background-color:#329a9d;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-2ltx{background-color:#cbcefb;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-kwqo{background-color:#cd9934;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-xkvz{background-color:#999903;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-n2o7{background-color:#f56b00;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-calz{font-weight:bold;background-color:#ecf4ff;text-align:center;vertical-align:top}
+.tg .tg-c57o{background-color:#ecf4ff;vertical-align:top}
+.tg .tg-dgww{background-color:#34ff34;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-3l80{background-color:#f8ff00;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-ynm2{background-color:#ecf4ff;color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-cv9a{background-color:#6665cd;color:#ffffff;text-align:center;vertical-align:top} 
+/* END css for /standard/hadoop/cdh-cluster-service-layout.md */
+
+/* table {width: 50%;margin: 10px auto;} */
