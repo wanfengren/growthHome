@@ -2,14 +2,14 @@
 
 该分析框架融合了经济学、营销学、战略学等多个学科的，是一个六层立体式渐进分析图，从六个方面，由近及远，由微观至宏观，由表及里，层层推进展开，基本上涵盖了行业分析的主要指标。便于大多数人理解和掌握。
 
-![industry](../../images/industry.jpeg)
+![industry](../images/industry.jpeg)
 ## 投资一家公司的逻辑
 
 高瓴擅长投资生物医药，消费，TMT互联网，企业服务四大领域 ，这些行业天然具备高护城河，高ROE，高ROIC的特点。
 
 ?> 高瓴的投资策略有四个维度，分别就是生意、环境、人和组织。
 
-![industry](../../images/gaoling.png)
+![industry](../images/gaoling.png)
 
 ### 生意
 
